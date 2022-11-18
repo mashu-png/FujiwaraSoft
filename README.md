@@ -1,0 +1,2 @@
+# FujiwaraSoft-inc.
+Fujiwarasoft inc.

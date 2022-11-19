@@ -5,11 +5,23 @@
     margin-block-end: 0%;
 }
 
-@media screen and (min-width:480px) {
+@media screen and (min-width:370px) {
+    .AnimationTitleIMG{
+        display: block;
+        position: relative;
+    }
+    .StartAnimationTextFilels{
+        text-align: center;
+        font-weight: bold;
+        font-size: 100%;
+        margin-top: 10%;
+    }
     .StartAnimation{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
     }
     .header{
         display: none;

@@ -8,20 +8,54 @@
 </head>
 <body>
     <div class="StartAnimation" id="StartAnimation">
-        <h1 class="StartAnimationTextFilels">Hello!</h1>
-        <img src="images/Title.png" class="AnimationTitleIMG" alt="TopTitle" width="250px" height="250px">
-        <h1 class="StartAnimationTextFilels">Welcome To We Company</h1>
+        <h1 class="StartAnimationTextFields" id="StartAnimationTopTextFields">Hello! How are you?</h1>
+        <img src="images/Title.png" class="AnimationTitleIMG" id="TopImageAnimation" alt="TopTitle" width="250px" height="250px">
+        <h1 class="StartAnimationTextFields" id="StartAnimationBottomTextFields">Welcome To our Company</h1>
     </div>
+
     <div class="header" id="header">
-        <div class="headerTitle">
-            <h1>株式会社FujiwaraSoft</h1>
+        <div class="headerContents">
+            <img src="images/Title.png" alt="Title" class="TitleImage" id="TitleImage" width="70x" height="40px">
+            <div class="Hamburger-menu" id="menu">
+                <span class="Value">Menu</span>
+            </div>
+        </div>
+    </div>
+    <div class="MenuDisplay" id="MenuDisplay">
+        <div class="MenuDisplayHeader">
+            <div class="MenuHeader">
+                <div class="MenuHeaderTextArea">
+                    <h1 class="MenuTexts">Site Menus</h1>
+                </div>
+                <div class="MenuClose" id="Close">
+                    <span class="CloseButton">✕</span>
+                </div>
+            </div>
+        </div>
+        <div class="MenuDisplayMain" id="MenuDisplayMain">
+            <div class="ListItems">
+                <ol class="ItemChilds">
+                    <li class="ItemText" id="Home">Home</li>
+                    <li class="ItemText" id="About">About</li>
+                    <li class="ItemText" id="Recruit">Recruit</li>
+                    <li class="ItemText" id="Contact">Contact</li>
+                </ol>
+            </div>
+        </div>
+        <div class="MenuDisplayFooter">
+
         </div>
     </div>
     <div class="main" id="main">
-
+        <div class=""></div>
     </div>
     <div class="footer" id="footer">
 
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+<script src="JS/System.js"></script>
+<script src="JS/VueSystems.js"></script>
 </html>

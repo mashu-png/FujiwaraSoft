@@ -3,14 +3,15 @@
 *{
     margin-block-start: 0%;
     margin-block-end: 0%;
+    margin: 0 0 0 0;
 }
 
-@media screen and (min-width:370px) {
+@media screen and (max-width:500px) {
     .AnimationTitleIMG{
         display: block;
         position: relative;
     }
-    .StartAnimationTextFilels{
+    .StartAnimationTextFields{
         text-align: center;
         font-weight: bold;
         font-size: 100%;
@@ -25,7 +26,97 @@
     }
     .header{
         display: none;
+        background-color: lightblue;
     }
+    .headerContents{
+        display: flex;
+        justify-content: space-between;
+        height: 3em;
+    }    
+    .TitleImage{
+        position: relative;
+    }
+    .Hamburger-menu{
+        display: flex;
+        vertical-align: middle;
+        margin-right: 5%;
+        top: 0px;
+        left: 0px;
+    }
+    .Value{
+        font-weight: bold;
+        width: 100%;
+        margin-top: 20%;
+        font-size: large;
+    }
+
+    .MenuDisplay{
+        display: none;
+    }
+    .MenuHeader{
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        height: 3em;
+    }
+    .MenuClose{
+        color: #fff;
+        margin-right: 5%;
+        height: 48px;
+        width: 52px;
+        display: flex;
+        vertical-align: middle;
+    }
+    .CloseButton{
+        font-weight: bold;
+        width: 100%;
+        font-size: x-large;
+        text-align: center;
+        padding: 14%;
+        margin-bottom: 2px;
+    }
+    ol{
+        display: flex;
+    }
+    .MenuContents{
+        display: flex;
+    }
+    .MenuDisplayMain{
+        position: relative;
+    }
+    .ItemChilds{
+        position: absolute;
+        top: 23em;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        list-style: none;
+        display: block;
+        
+    }
+    .ItemText{
+        margin-top: 2em;
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        animation: toptobottomScale 1.4s ease 0s 1 normal;
+    }
+
+    @keyframes toptobottomScale {
+        0% {
+            transform: translateY(-1200px) scale(0.7);
+            opacity: .7
+        }
+        80% {
+            transform: translateY(0) scale(0.7);
+            opacity: .7
+        }
+        to {
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+    
     .main{
         display: none;
     }

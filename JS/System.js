@@ -38,9 +38,16 @@
         //setTimeout(loadedCSS,12000)
     }
 
+    const StartAnimationClassName = "AnimationStart"
+
     menuElement.addEventListener("click", MenuClickINHandler)
     function MenuClickINHandler(){
         setTimeout(function(){
+            HomeElement.classList.add(StartAnimationClassName);
+            AboutElement.classList.add(StartAnimationClassName);
+            RecruitElement.classList.add(StartAnimationClassName);
+            ContactElement.classList.add(StartAnimationClassName);
+            console.log(ContactElement.classList);
             $('#header').fadeOut(1000);
             $('#main').fadeOut(1000);
             $('#footer').fadeOut(1000);
@@ -48,27 +55,37 @@
         setTimeout(function(){
             $('#MenuDisplay').hide().fadeIn(2000);
             MenuHeaderColor();
-        },1500)
+        },2000)
+
+        if(HomeElement.classList[1] === StartAnimationClassName){
+            HomeElement.classList.remove(StartAnimationClassName)
+            AboutElement.classList.remove(StartAnimationClassName)
+            RecruitElement.classList.remove(StartAnimationClassName)
+            ContactElement.classList.remove(StartAnimationClassName)
+        }
     }
 
 
-    const AddClassName = "Exit";
+    const EndAnimatiopnClass = "Exit";
 
     CloseElement.addEventListener("click" ,MenuClickOutHandler)
     function MenuClickOutHandler(){
-        HomeElement.classList.toggle(AddClassName);
-        AboutElement.classList.toggle(AddClassName);
-        RecruitElement.classList.toggle(AddClassName);
-        ContactElement.classList.toggle(AddClassName);
         setTimeout(function(){
-            $('#MenuDisplay').fadeOut(2000);
-
+            HomeElement.classList.add(EndAnimatiopnClass)
+            AboutElement.classList.add(EndAnimatiopnClass);
+            RecruitElement.classList.add(EndAnimatiopnClass);
+            ContactElement.classList.add(EndAnimatiopnClass);
+            $('#MenuDisplay').fadeOut(1250);
         },500);
         setTimeout(function(){
-            $('#header').hide().fadeIn(1000)
-            $('#main').hide().fadeIn(1000)
-            $('#footer').hide().fadeIn(1000)
-        },1500)
+            $('#header').hide().fadeIn(1000);
+            $('#main').hide().fadeIn(1000);
+            $('#footer').hide().fadeIn(1000);
+            HomeElement.classList.remove(EndAnimatiopnClass)
+            AboutElement.classList.remove(EndAnimatiopnClass)
+            RecruitElement.classList.remove(EndAnimatiopnClass)
+            ContactElement.classList.remove(EndAnimatiopnClass)
+        },1500);
 
     }
 

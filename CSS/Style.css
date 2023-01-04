@@ -99,9 +99,19 @@
         font-size: 25px;
         font-weight: bold;
         color: #000;
-        animation: toptobottomScale 1.4s ease 0s 1 normal;
+        
     }
 
+    .AnimationStart{
+        animation: toptobottomScale 1.4s ease 0s 1 normal;
+    }
+    .Exit{
+        margin-top: 2em;
+        font-size: 25px;
+        font-weight: bold;
+        color: #000;
+        animation: Exit 1.4s ease 0s 1 normal;
+    }
     @keyframes toptobottomScale {
         0% {
             transform: translateY(-1200px) scale(0.7);
@@ -113,9 +123,25 @@
         }
         to {
             transform: scale(1);
-            opacity: 1
+            opacity: 1;
         }
     }
+
+    @keyframes Exit {
+        0%{
+            transform: translateY(1200) scale(0.7);
+            opacity: .7;
+        }
+        80%{
+            transform: translateY(0) scale(0.7);
+            opacity: .7;
+        }
+        to {
+            transform: scale(-1);
+            opacity: 1;
+        }
+    }
+
     
     .main{
         display: none;

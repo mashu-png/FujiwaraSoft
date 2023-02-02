@@ -1,3 +1,5 @@
+//const { createFunctionExpression } = require("@vue/compiler-core");
+
 (function(){
     let StartElement = document.getElementById('StartAnimation')
     let StartAnimationImageElement = document.getElementById('TopImageAnimation')
@@ -23,7 +25,7 @@
         setTimeout(function () {
             $('#StartAnimationTopTextFields').hide().fadeIn(2500);
             $('#TopImageAnimation').hide().fadeIn(1000);
-            $('#StartAnimationBottomTextFields').hide().fadeIn(4500);          
+            $('#StartAnimationBottomTextFields').hide().fadeIn(4500);
         },3000);
         setInterval(function () {
             $('#StartAnimationTopTextFields').fadeOut(2000);
@@ -66,16 +68,17 @@
     }
 
 
+
     const EndAnimatiopnClass = "Exit";
 
     CloseElement.addEventListener("click" ,MenuClickOutHandler)
     function MenuClickOutHandler(){
         setTimeout(function(){
-            HomeElement.classList.add(EndAnimatiopnClass)
+            HomeElement.classList.add(EndAnimatiopnClass);
             AboutElement.classList.add(EndAnimatiopnClass);
             RecruitElement.classList.add(EndAnimatiopnClass);
             ContactElement.classList.add(EndAnimatiopnClass);
-            $('#MenuDisplay').fadeOut(1250);
+            $('#MenuDisplay').fadeOut(1000);
         },500);
         setTimeout(function(){
             $('#header').hide().fadeIn(1000);
@@ -97,5 +100,24 @@
             color: "#ffffff"
         },1000)
         MenuHeaderColor();
+    }
+
+
+    HomeElement.addEventListener("click", Home)
+    AboutElement.addEventListener("click", About)
+    RecruitElement.addEventListener("click", Recruit)
+    ContactElement.addEventListener("click", Contact)
+
+    function Home(){
+        
+    }
+    function About(){
+
+    }
+    function Recruit(){
+
+    }
+    function Contact(){
+        
     }
 }())

@@ -34,8 +34,8 @@
         },8000)
         setTimeout(function () {
             $('#header').hide().fadeIn(1000)
-            $('#main').hide().fadeIn(1000)
-            $('#footer').hide().fadeIn(1000)
+            $('#main').hide().fadeIn(200)
+            $('#footer').hide().fadeIn(6000)
         },10000);
         //setTimeout(loadedCSS,12000)
     }

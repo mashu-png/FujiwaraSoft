@@ -99,6 +99,7 @@
         font-size: 25px;
         font-weight: bold;
         color: #000;
+        filter: drop-shadow(16px 16px 16px #d21369);
         
     }
 
@@ -140,6 +141,34 @@
             transform: scale(-1);
             opacity: 1;
         }
+    }
+    .main {
+        display: none;
+    }
+    div.mainContentsTitle{
+        background-color: #000000;
+        color: #ffffff;
+    }
+    .PressReleaseTitle{
+        margin-top: 5%;
+        text-align: center;
+        font-size: 30px;
+    }
+    .PressReleaseMain ul{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        border: 1px solid #000000;
+        border-radius: 25px;
+    }
+    ul{
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    li.PressRelease-Border{
+        border: 1px solid #000;
+        list-style: none;
     }
     .footer{
         display: none;

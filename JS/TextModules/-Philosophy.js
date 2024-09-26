@@ -1,0 +1,2 @@
+export const Title = "経営理念"
+export const Text = "我々の掲げる経営理念は<br/><strong class='_SUBTITLE_'>人間がいらない暮らしの実現</strong><br/>この目標に向け私たちの会社内では<br/><strong class='_Button_'>ヒューマノイドロボットの開発</strong><strong class='_Button_'>クローン人間の研究</strong><strong class='_Button_'>AIによる完全自動化</strong><strong class='_Button_'>その他システム開発運用保守</strong><br/>などに注力してまいりますので,<br/>よろしくお願いいたします"

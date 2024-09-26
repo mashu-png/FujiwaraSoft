@@ -1,0 +1,2 @@
+export const Title = "業務内容"
+export const Text = "<strong class='_strong_'>新規システムの開発</strong>から<strong class='_strong_'>既存システムの運用</strong><br/><br/>システム開発部門:<br/><strong class='_Product_ Web _Left_'>Webシステム構築運用<br/>(FrontEnd BackEnd)</strong><strong class='_Product_ Server _Right_'>サーバー構築運用<br/>(Java,Hardware)</strong><strong class='_Product_ Embedded _Left_'>システム組込(C,C#,Java)</strong><strong class='_Product_ AI _Right_'>AIエンジニア(Python)</strong><strong class='_Product_ Data _Left_'>データ分析エンジニア<br/>(R,Analysis)</strong><br/><strong class='_Product_'></strong>"

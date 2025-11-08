@@ -1,23 +1,20 @@
-//const { createFunctionExpression } = require("@vue/compiler-core");
-
-(function(){
+import { AboutPage } from './PageSystemModules/-AboutPage.js';
+(function(){    
     const HeaderElement = document.getElementById('header')
     const menuElement = document.getElementById('menu');
     const HomeElement = document.getElementById('Home');
     const AboutElement = document.getElementById('About');
     const AboutMenuElement = document.getElementById('About-menu');
-    const RecruitElement= document.getElementById('Recruit')
-    const ContactElement = document.getElementById('Contact')
+    const RecruitElement= document.getElementById('Recruit');
+    const ContactElement = document.getElementById('Contact');
+    const ServiceElement = document.getElementById('Service');
     const CloseElement = document.getElementById('Close');
     const mainElement = document.getElementById('main');
     const footerElement = document.getElementById('footer');
-    const AboutPages = {
-        AboutPages:document.getElementById('AboutPage'),
-        About_Header:document.getElementById('header-About'),
-        About_menu:document.getElementById('menu-About'),
-        About_Body:document.getElementById('main-About'),
-        About_footer:document.getElementById('footer-About')
-    };
+
+    const ServicePages = {
+        ServicePagesElement: document.getElementById('ServicePage'),
+    }
 
     $('#TopImageAnimation').hide()
     $('#StartAnimationTopTextFields').hide()
@@ -53,6 +50,7 @@
             AboutElement.classList.add(StartAnimationClassName);
             RecruitElement.classList.add(StartAnimationClassName);
             ContactElement.classList.add(StartAnimationClassName);
+            ServiceElement.classList.add(StartAnimationClassName);
             console.log(ContactElement.classList);
             $('#header').fadeOut(1000)
             $('#main').fadeOut(1000);
@@ -63,10 +61,11 @@
         },2000)
 
         if(HomeElement.classList[1] === StartAnimationClassName){
-            HomeElement.classList.remove(StartAnimationClassName)
-            AboutElement.classList.remove(StartAnimationClassName)
-            RecruitElement.classList.remove(StartAnimationClassName)
-            ContactElement.classList.remove(StartAnimationClassName)
+            HomeElement.classList.remove(StartAnimationClassName);
+            AboutElement.classList.remove(StartAnimationClassName);
+            RecruitElement.classList.remove(StartAnimationClassName);
+            ContactElement.classList.remove(StartAnimationClassName);
+            ServiceElement.classList.remove(StartAnimationClassName);
         }
     }
 
@@ -79,16 +78,18 @@
             AboutElement.classList.add(EndAnimationClass);
             RecruitElement.classList.add(EndAnimationClass);
             ContactElement.classList.add(EndAnimationClass);
+            ServiceElement.classList.add(EndAnimationClass);
             $('#MenuDisplay').fadeOut(1000);
         },500);
         setTimeout(function(){
             $('#header').hide().fadeIn(1000);
             $('#main').hide().fadeIn(1000);
             $('#footer').hide().fadeIn(1000);
-            HomeElement.classList.remove(EndAnimationClass)
-            AboutElement.classList.remove(EndAnimationClass)
-            RecruitElement.classList.remove(EndAnimationClass)
-            ContactElement.classList.remove(EndAnimationClass)
+            HomeElement.classList.remove(EndAnimationClass);
+            AboutElement.classList.remove(EndAnimationClass);
+            RecruitElement.classList.remove(EndAnimationClass);
+            ContactElement.classList.remove(EndAnimationClass);
+            ServiceElement.classList.remove(EndAnimationClass);
         },1500);
 
     }
@@ -107,6 +108,7 @@
             AboutElement.classList.add(EndAnimationClass);
             RecruitElement.classList.add(EndAnimationClass);
             ContactElement.classList.add(EndAnimationClass);
+            ServiceElement.classList.add(EndAnimationClass);
         },500)
         setTimeout(function() {
             $('#header').hide().fadeIn(2500);
@@ -116,6 +118,7 @@
             AboutElement.classList.remove(EndAnimationClass);
             RecruitElement.classList.remove(EndAnimationClass);
             ContactElement.classList.remove(EndAnimationClass);
+            ServiceElement.classList.remove(EndAnimationClass);
         },1500);
 
     }
@@ -127,13 +130,14 @@
             AboutElement.classList.add(EndAnimationClass);
             RecruitElement.classList.add(EndAnimationClass);
             ContactElement.classList.add(EndAnimationClass);
+            ServiceElement.classList.add(EndAnimationClass);
         },500)
         setTimeout(function () {
             HomeElement.classList.remove(EndAnimationClass);
             AboutElement.classList.remove(EndAnimationClass);
             RecruitElement.classList.remove(EndAnimationClass);
             ContactElement.classList.remove(EndAnimationClass);
-            
+            ServiceElement.classList.remove(EndAnimationClass);
         SettingAboutPageStyles();
         },1500);
     }
@@ -168,14 +172,14 @@
     }
 
     function SettingAboutPageStyles () {
-        const AboutPageElements = AboutPages.AboutPages;
-        const AboutHeaderElement = AboutPages.About_Header;
-        const AboutBodyElement = AboutPages.About_Body;
+        const AboutPageElements = AboutPage.PageElements;
+        const AboutHeaderElement = AboutPage.Header;
+        const AboutBodyElement = AboutPage.Body;
         const marqueeTextElement = document.getElementById('marqueeText-About');
-        const AboutFooterElement = AboutPages.About_footer;
+        const AboutFooterElement = AboutPage.Footer;
         const HeaderStyle = AboutHeaderElement.style;
         const BodyStyle = AboutBodyElement.style;
-        const FooterStyle = AboutBodyElement.style;
+        const FooterStyle = AboutFooterElement.style;
 
         AboutPageElements.style.display = "flex"
         $('#header-About').hide().fadeIn(2500);
@@ -187,11 +191,23 @@
         BodyStyle.backgroundColor = "#FFFEF6"
         marqueeTextElement.innerHTML = "This is a ABout page"
         marqueeTextElement.style.textAlign = "left";
-        marqueeTextElement.style.color = "#fff"
+        marqueeTextElement.style.color = "#fff";
+        FooterStyle.position = "absolute";
+        FooterStyle.bottom = "0";
+        FooterStyle.backgroundColor = "#000"
+        FooterStyle.color = "#fff";
 
         AboutMenuElement.addEventListener('click',function() {
             $('.AboutPage').fadeOut(2000);
             MenuClickINHandler();
         })
     }
+
+    function ServicePageStyle(){
+        $('#header-Service').hide.fadeIn(2500);
+        $('#main-Service').hide().fadeIn(3500);
+        $('#footer-Service').hide().fadeIn(4500);
+         
+    }
+
 }())

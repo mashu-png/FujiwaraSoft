@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+/*基本的なページ全体のCSS*/
 *{
     margin-block-start: 0%;
     margin-block-end: 0%;
@@ -118,9 +119,7 @@ body{
         top: 0;
         left: 0;
     } 
-    .TitleImage{
-        position: relative;
-    }
+    .TitleImage{ position: relative; }
     .Hamburger-menu{
         display: flex;
         vertical-align: middle;
@@ -135,9 +134,7 @@ body{
         font-size: large;
     }
 
-    .MenuDisplay{
-        display: none;
-    }
+    .MenuDisplay{ display: none; }
     .MenuHeader{
         background-color: #000;
         color: #fff;
@@ -161,15 +158,9 @@ body{
         padding: 14%;
         margin-bottom: 2px;
     }
-    ol{
-        display: flex;
-    }
-    .MenuContents{
-        display: flex;
-    }
-    .MenuDisplayMain{
-        position: relative;
-    }
+    ol{ display: flex; }
+    .MenuContents{ display: flex; }
+    .MenuDisplayMain{ position: relative; }
     .ItemChilds{
         position: absolute;
         top: 23em;
@@ -227,9 +218,7 @@ body{
             opacity: 1;
         }
     }
-    .main {
-        display: none;
-    }
+    .main { display: none; }
     th{
         width: 35%;
         background-color: #e1e6ea;
@@ -254,9 +243,7 @@ body{
         margin-right: 5%;
         margin-left: -5%;
     }
-    .PressReleaseText{
-        background-color: antiquewhite;
-    }
+    .PressReleaseText{ background-color: antiquewhite; }
     li.PressReleaseText{
         font-size: 20px;
         border-bottom: 2px solid #000;
@@ -281,15 +268,9 @@ body{
         margin-left: 5%;
         margin-right: 5%;
     }
-    .map{
-        margin-top: 5%;
-    }
-    .Access{
-        margin-top: 5%;
-    }
-    .TEL{
-        text-align: right;
-    }
+    .map{ margin-top: 5%; }
+    .Access{ margin-top: 5%; }
+    .TEL{ text-align: right; }
     .TextTitle{
         display: flex;
         align-items: center;
@@ -302,12 +283,8 @@ body{
         content: "";
         width: 1em;
     }
-    .TextTitle:before{
-        margin-right: 5%;
-    }
-    .TextTitle:after {
-        margin-left: 5%;
-    }
+    .TextTitle:before{ margin-right: 5%; }
+    .TextTitle:after { margin-left: 5%; }
     .footer{
         display: none;
         bottom: 0;
@@ -321,6 +298,7 @@ body{
     .Sponsor{
         text-align: center;
     }
+    /*AboutPageのCSS*/
     .AboutPage {
         display: none;
     }
@@ -329,9 +307,7 @@ body{
         margin-top: 5%;
         padding-bottom: 5%;
     }
-    .CompanyProfileArea{
-        margin: 0 auto;
-    }
+    .CompanyProfileArea{ margin: 0 auto; }
     .AboutPageButton{
         margin-left: 2.5%;
         margin-right: 2.5%;
@@ -348,19 +324,28 @@ body{
         background-color: rgb(136, 136, 255);
         box-shadow:12px 12px 2px 1px rgb(255, 136,136);
     }
-    .OfficerArea{
-        display: none;
-    }
-    .AccessArea{
-        display: none;
-    }
-    .HistoryArea{
-        display: none;
-    }
-    .HistoryTitle{
-        font-family: googl;
-    }
+    /*経営陣のぺージCSS*/
+    .OfficerArea{ display: none; }
+    /*所在地ページのCSS*/
+    .AccessArea{ display: none; }
+    /* 歴史ページのCSS*/
+    .HistoryArea{ display: none; }
+    .HistoryTitle{ font-size: 25px; }
     .HTEXT{
         display: inline-block;
+        margin-top: 5%;
     }
+    div.HTEXT span.Year{ font-weight: bolder; }
+    /*サービスページのCSS*/
+    div.ServicePage{display: none; }
+    div.Service_Contents img{
+        display: inline-block;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    div.Service_Contents div.Contents_Text{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    .Servive_Contents_Area{ display: inline-flex; }
 }
